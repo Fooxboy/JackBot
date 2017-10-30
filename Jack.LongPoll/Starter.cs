@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Jack.Models.LongPoll;
 using Newtonsoft.Json;
 using Jack.Exception.LongPoll;
-using Jack.Enums;
 
 namespace Jack.LongPoll
 {
@@ -13,17 +12,14 @@ namespace Jack.LongPoll
         string server = "";
         string ts = "";
 
-        public void Start()
+        public ResponseLongPoll Start()
         {
             if((key == "")&(server == ""))
             {
                 SetKeyAndServer();
             }
-
-            while(true)
-            {
-                Main();
-            }
+            var response = Main();
+            return response;
         }
 
         private void SetKeyAndServer()
@@ -35,8 +31,10 @@ namespace Jack.LongPoll
             ts = model.ts;
         }
 
-        private void Main()
+        private ResponseLongPoll Main()
         {
+            var MainModel = new ResponseLongPoll();
+
             GetJsonLongPoll objectJson = new GetJsonLongPoll()
             {
                 Server = server,
@@ -64,7 +62,7 @@ namespace Jack.LongPoll
                 {
                     for (int i = 0; i < LongPoll.Count; i++)
                     {
-                        var MainModel = new ResponseLongPoll();
+                        
                         int code = Convert.ToInt32((string)LongPoll[i][0]);
                         try
                         {
@@ -104,7 +102,9 @@ namespace Jack.LongPoll
                         }
                     }
                 }
-            }     
+            }
+
+            return MainModel;
         }
     }
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using Jack.LongPoll;
 
 namespace Jack
 {
@@ -7,6 +8,14 @@ namespace Jack
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+        }
+
+        private void StartBot()
+        {
+            Starter starter = new Starter();
+            var responseLongPoll =  starter.Start();
+
+
         }
     }
 }

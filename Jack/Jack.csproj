@@ -9,4 +9,11 @@
     <PackageReference Include="VkNet" Version="1.29.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Jack.Enums\Jack.Enums.csproj" />
+    <ProjectReference Include="..\Jack.Exception\Jack.Exception.csproj" />
+    <ProjectReference Include="..\Jack.LongPoll\Jack.LongPoll.csproj" />
+    <ProjectReference Include="..\Jack.Models\Jack.Models.csproj" />
+  </ItemGroup>
+
 </Project>
