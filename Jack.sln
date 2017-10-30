@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jack", "Jack\Jack.csproj", "{65319014-C024-4EF3-97A0-D8B48CC08347}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jack", "Jack\Jack.csproj", "{65319014-C024-4EF3-97A0-D8B48CC08347}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jack.LongPoll", "Jack.LongPoll\Jack.LongPoll.csproj", "{F1301799-732F-4615-AA90-E0CD156882BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jack.LongPoll", "Jack.LongPoll\Jack.LongPoll.csproj", "{F1301799-732F-4615-AA90-E0CD156882BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jack.Models", "Jack.Models\Jack.Models.csproj", "{872C5C74-6D67-4EA4-A4FE-3D44BBEFB439}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jack.Models", "Jack.Models\Jack.Models.csproj", "{872C5C74-6D67-4EA4-A4FE-3D44BBEFB439}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jack.Enums", "Jack.Enums\Jack.Enums.csproj", "{345DF554-E69B-4C8A-AD7A-8C1D90F09E6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jack.Exception", "Jack.Exception\Jack.Exception.csproj", "{16151F5D-4C5F-430C-9FFB-390DC5F6A06D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{872C5C74-6D67-4EA4-A4FE-3D44BBEFB439}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{872C5C74-6D67-4EA4-A4FE-3D44BBEFB439}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{872C5C74-6D67-4EA4-A4FE-3D44BBEFB439}.Release|Any CPU.Build.0 = Release|Any CPU
+		{345DF554-E69B-4C8A-AD7A-8C1D90F09E6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{345DF554-E69B-4C8A-AD7A-8C1D90F09E6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{345DF554-E69B-4C8A-AD7A-8C1D90F09E6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{345DF554-E69B-4C8A-AD7A-8C1D90F09E6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16151F5D-4C5F-430C-9FFB-390DC5F6A06D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16151F5D-4C5F-430C-9FFB-390DC5F6A06D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16151F5D-4C5F-430C-9FFB-390DC5F6A06D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16151F5D-4C5F-430C-9FFB-390DC5F6A06D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
