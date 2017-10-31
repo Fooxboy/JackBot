@@ -39,7 +39,7 @@ namespace Jack.Database
             connect.Close();
         }
 
-        public bool CheckUser(string id)
+        public bool Check(string id)
         {
             connect.Open();
             string sql = $"SELECT Is FROM {table} WHERE id={id}";

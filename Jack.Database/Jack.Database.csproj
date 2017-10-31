@@ -9,8 +9,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Jack\" />
     <Folder Include="Mafia\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Jack.Enums\Jack.Enums.csproj" />
   </ItemGroup>
 
 </Project>
