@@ -9,11 +9,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jack.LongPoll", "Jack.LongP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jack.Models", "Jack.Models\Jack.Models.csproj", "{872C5C74-6D67-4EA4-A4FE-3D44BBEFB439}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jack.Enums", "Jack.Enums\Jack.Enums.csproj", "{345DF554-E69B-4C8A-AD7A-8C1D90F09E6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jack.Enums", "Jack.Enums\Jack.Enums.csproj", "{345DF554-E69B-4C8A-AD7A-8C1D90F09E6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jack.Exception", "Jack.Exception\Jack.Exception.csproj", "{16151F5D-4C5F-430C-9FFB-390DC5F6A06D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jack.Exception", "Jack.Exception\Jack.Exception.csproj", "{16151F5D-4C5F-430C-9FFB-390DC5F6A06D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jack.Database", "Jack.Database\Jack.Database.csproj", "{DF1C57A7-ED00-4666-8058-1B34D68EDE9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jack.Database", "Jack.Database\Jack.Database.csproj", "{DF1C57A7-ED00-4666-8058-1B34D68EDE9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jack.API", "Jack.API\Jack.API.csproj", "{869DD1A9-DFF4-4710-B668-E03582D906F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jack.Files", "Jack.Files\Jack.Files.csproj", "{BCD45063-7C12-4081-BED3-613AE1BA19E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{DF1C57A7-ED00-4666-8058-1B34D68EDE9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF1C57A7-ED00-4666-8058-1B34D68EDE9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF1C57A7-ED00-4666-8058-1B34D68EDE9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{869DD1A9-DFF4-4710-B668-E03582D906F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{869DD1A9-DFF4-4710-B668-E03582D906F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{869DD1A9-DFF4-4710-B668-E03582D906F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{869DD1A9-DFF4-4710-B668-E03582D906F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCD45063-7C12-4081-BED3-613AE1BA19E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCD45063-7C12-4081-BED3-613AE1BA19E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCD45063-7C12-4081-BED3-613AE1BA19E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCD45063-7C12-4081-BED3-613AE1BA19E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

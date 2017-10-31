@@ -9,12 +9,12 @@ namespace Jack.Database.Jack
         public string Id;
         Methods method = new Methods("mike", "users");
 
-        public static void Add(string id, string name, Enums.Jack.Privileges Privileges)
+        public static void Add(string id, string name, string Privileges, string PrivilegesTime)
         {
             Methods method = new Methods("jack", "users");
             string fields = @"`id`, `Name`, `Ban`, `Is`, `Privileges`, `PrivilegesTime`";
             string first_name = name;
-            string values = $@"'{id}', '{first_name}','0', '1', '1', '-1'";
+            string values = $@"'{id}', '{first_name}','0', '1', '{Privileges}', '{PrivilegesTime}'";
             method.Add(fields, values);
         }
 

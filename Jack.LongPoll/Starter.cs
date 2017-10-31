@@ -103,7 +103,6 @@ namespace Jack.LongPoll
                     }
                 }
             }
-
             return MainModel;
         }
     }
