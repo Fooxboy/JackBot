@@ -15,9 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jack.Exception", "Jack.Exce
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jack.Database", "Jack.Database\Jack.Database.csproj", "{DF1C57A7-ED00-4666-8058-1B34D68EDE9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jack.API", "Jack.API\Jack.API.csproj", "{869DD1A9-DFF4-4710-B668-E03582D906F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jack.API", "Jack.API\Jack.API.csproj", "{869DD1A9-DFF4-4710-B668-E03582D906F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jack.Files", "Jack.Files\Jack.Files.csproj", "{BCD45063-7C12-4081-BED3-613AE1BA19E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jack.Files", "Jack.Files\Jack.Files.csproj", "{BCD45063-7C12-4081-BED3-613AE1BA19E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jack.Yandex", "Jack.Yandex\Jack.Yandex.csproj", "{09531FA1-4CE3-4C13-B3FE-444742360B6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{BCD45063-7C12-4081-BED3-613AE1BA19E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCD45063-7C12-4081-BED3-613AE1BA19E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCD45063-7C12-4081-BED3-613AE1BA19E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09531FA1-4CE3-4C13-B3FE-444742360B6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09531FA1-4CE3-4C13-B3FE-444742360B6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09531FA1-4CE3-4C13-B3FE-444742360B6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09531FA1-4CE3-4C13-B3FE-444742360B6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

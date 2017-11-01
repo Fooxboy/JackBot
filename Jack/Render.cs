@@ -44,6 +44,7 @@ namespace Jack
                 }else
                 {
                     user.New(Enums.Jack.Privileges.User);
+                    ChoiseCommand(message, arrayTextMessage);
                 }
             }
         }
@@ -53,10 +54,10 @@ namespace Jack
             if(array.Length != 1)
             {
                 string command = array[1].ToLower();
-
                 switch(command)
                 {
                     case "оботе":
+                        Commands.About.Start(message, array);
                         break;
                     case "помощь":
                         break;

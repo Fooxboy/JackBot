@@ -14,12 +14,13 @@ namespace Jack.LongPoll
 
         public ResponseLongPoll Start()
         {
-            if((key == "")&(server == ""))
+            SetKeyAndServer();
+
+            while(true)
             {
-                SetKeyAndServer();
-            }
-            var response = Main();
-            return response;
+                var response = Main();
+                return response;
+            } 
         }
 
         private void SetKeyAndServer()
@@ -51,7 +52,7 @@ namespace Jack.LongPoll
             }catch
             {
                 //TODO: Сделать обработку ошибок лонг пулла.
-                
+                SetKeyAndServer();
             }
 
             if(objectLongPoll != null)

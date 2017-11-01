@@ -14,6 +14,8 @@ namespace Jack
             if(model.Event == Enums.LongPoll.Events.NewMessage)
             {
                 var message = (Update.NewMessage)model.Message;
+
+                NewMessage(message);
             }
         }
 

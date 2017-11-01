@@ -10,8 +10,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Jack.Enums\Jack.Enums.csproj" />
-    <ProjectReference Include="..\Jack.Exception\Jack.Exception.csproj" />
-    <ProjectReference Include="..\Jack.Files\Jack.Files.csproj" />
     <ProjectReference Include="..\Jack.Models\Jack.Models.csproj" />
   </ItemGroup>
 
