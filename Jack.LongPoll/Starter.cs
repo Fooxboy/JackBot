@@ -51,7 +51,6 @@ namespace Jack.LongPoll
                 objectLongPoll = JsonConvert.DeserializeObject<RootLongPoll>(json);
             }catch
             {
-                //TODO: Сделать обработку ошибок лонг пулла.
                 SetKeyAndServer();
             }
 

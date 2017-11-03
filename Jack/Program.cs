@@ -9,15 +9,17 @@ namespace Jack
         {
             Console.WriteLine("Hello World!");
 
-
         }
 
         private void StartBot()
         {
             Starter starter = new Starter();
             var responseLongPoll =  starter.Start();
+
             Logger.NewEvent(responseLongPoll);
 
+            var render = new Render();
+            render.Start(responseLongPoll);
         }
     }
 }

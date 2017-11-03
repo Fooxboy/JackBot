@@ -15,5 +15,17 @@ namespace Jack.Enums
             Admin = 5,
             Tester = 6
         }
+
+        public struct Missions
+        {
+            public enum Type
+            {
+                LikePhoto = 1,
+                Repost = 2,
+                AddFriend = 3,
+                Write = 4,
+                LikeWall = 5
+            }
+        }
     }
 }
