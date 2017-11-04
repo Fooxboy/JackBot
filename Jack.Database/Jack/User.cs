@@ -85,5 +85,16 @@ namespace Jack.Database.Jack
                 method.EditField(Id, "PrivilegesTime", PrivilegesTime);
             }
         }
+        public string Money
+        {
+            get
+            {
+                return method.GetFromId(Id, "Money");
+            }
+            set
+            {
+                method.EditField(Id, "Money", PrivilegesTime);
+            }
+        }
     }
 }

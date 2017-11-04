@@ -5,8 +5,8 @@ namespace Jack.Files
 {
     public static class Jack
     {
-        public static string Version = "0.0.3";
+        public static string Version = "0.0.4";
         public static string Build = "04.11.2017";
-        public static string Token = "bfa9879d97d107fad8968a8ec0e521ee1981be66a3f3c82c13976a9a6ebedf7fa18bc7f1d16f40a346b56";
+        public static string Token = "cae5063436f3fb56eb177f57e93cffa200dd79133782b9f00f849699704d8470829aaba2797131254b01c";
     }
 }

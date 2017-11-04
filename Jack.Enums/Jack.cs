@@ -13,7 +13,7 @@ namespace Jack.Enums
             Premium = 3,
             Diamond = 4,
             Admin = 5,
-            Tester = 6
+            Insider = 6
         }
 
         public struct Missions
