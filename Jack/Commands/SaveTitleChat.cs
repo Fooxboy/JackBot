@@ -12,24 +12,87 @@ namespace Jack.Commands
         {
             User user = new User(message.From);
             if(user.Privileges != Enums.Jack.Privileges.User)
-            {
-                //var getchat = Vk.Auth().Messages.GetChat();
+            {             
                 if (message.Type == Enums.LongPoll.TypeMessage.Chat)
                 {
-                    string chatId = message.ExtraFields.PeerId;
-                    Chat chat = new Chat(chatId);
+                    var getchat = Vk.Auth().Messages.GetChat(API.Convert.PeerIdToChatId(message.ExtraFields.PeerId));
+                    long chatId = API.Convert.PeerIdToChatId(message.ExtraFields.PeerId);
 
+                    Chat chat = new Chat(chatId.ToString());
                     if (!chat.Is)
                     {
-                        chat.New(message.From, arguments[2]);
-                    } else
+                        chat.New(message.From, getchat.Title);
+                    }            
+                    if((message.From == getchat.AdminId.ToString())||(message.From == chat.Admin))
                     {
-                        chat.Name = arguments[2];
-                    }
+                        var title = "title";
+                        try
+                        {
+                            title = arguments[2];
+                        }
+                        catch
+                        {
+                            title = getchat.Title;
+                        }
+                        chat.Name = title;
 
-                    
+                        API.Message.Send(new Models.MessageSendParams
+                        {
+                            From = message.From,
+                            PeerId = System.Convert.ToInt64(message.ExtraFields.PeerId),
+                            Message = Files.Commands.SaveTitleChat.Compete
+                        });
+                    }else
+                    {
+                        API.Message.Send(new Models.MessageSendParams
+                        {
+                            From = message.From,
+                            PeerId = System.Convert.ToInt64(message.ExtraFields.PeerId),
+                            Message = Files.Commands.SaveTitleChat.NoAdmin
+                        });
+                    }
+                }else
+                {
+                    API.Message.Send(new Models.MessageSendParams
+                    {
+                        From = message.From,
+                        PeerId = System.Convert.ToInt64(message.ExtraFields.PeerId),
+                        Message = Files.Commands.SaveTitleChat.NoChat
+                    });
                 }
-            } 
+            }else
+            {
+                API.Message.Send(new Models.MessageSendParams
+                {
+                    From = message.From,
+                    PeerId = System.Convert.ToInt64(message.ExtraFields.PeerId),
+                    Message = Files.Commands.SaveTitleChat.NoAccess
+                });
+            }
+        }
+
+        public static void TriggerEditChat(Update.NewMessage message)
+        {
+            long chatId = API.Convert.PeerIdToChatId(message.ExtraFields.PeerId);
+
+            Chat chat = new Chat(chatId.ToString());
+
+            if(chat.Is)
+            {
+                var getchat = Vk.Auth().Messages.GetChat(API.Convert.PeerIdToChatId(message.ExtraFields.PeerId));
+                string id = message.From;
+                if (id != getchat.AdminId.ToString() || id != chat.Admin)
+                {
+                    //Нельзя изменить типа
+                    Vk.Auth().Messages.EditChat(chatId, chat.Name);
+                    API.Message.Send(new Models.MessageSendParams
+                    {
+                        From = message.From,
+                        PeerId = System.Convert.ToInt64(message.ExtraFields.PeerId),
+                        Message = Files.Commands.SaveTitleChat.NoEdit
+                    });
+                }
+            }
         }
     }
 }

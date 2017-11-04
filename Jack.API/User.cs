@@ -47,14 +47,14 @@ namespace Jack.API
             }
         }
 
-        public string Foxs
+        public int Foxs
         {
             get
             {
-                return user.Money;
+                return System.Convert.ToInt32(user.Money);
             }set
             {
-                user.Money = Foxs;
+                user.Money = Foxs.ToString();
             }
         }
 
@@ -62,7 +62,7 @@ namespace Jack.API
         {
             get
             {
-                int privileges = Convert.ToInt32(user.Privileges);
+                int privileges = System.Convert.ToInt32(user.Privileges);
 
                 if (privileges == 1)
                 {
@@ -82,6 +82,9 @@ namespace Jack.API
                 }else if(privileges == 6)
                 {
                     return Enums.Jack.Privileges.Insider;
+                } else
+                {
+                    throw new Exception("hou");
                 }
 
             }set
@@ -96,7 +99,7 @@ namespace Jack.API
             string id = Id;
             int privileges = (int)modelPrivileges;
 
-            string name = Vk.Auth().Users.Get(Convert.ToInt64(id)).FirstName;
+            string name = Vk.Auth().Users.Get(System.Convert.ToInt64(id)).FirstName;
 
             Database.Jack.User.Add(id, name, privileges.ToString(), time);
         }
