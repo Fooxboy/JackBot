@@ -16,6 +16,7 @@
     <ProjectReference Include="..\Jack.Files\Jack.Files.csproj" />
     <ProjectReference Include="..\Jack.LongPoll\Jack.LongPoll.csproj" />
     <ProjectReference Include="..\Jack.Models\Jack.Models.csproj" />
+    <ProjectReference Include="..\Jack.Statistics\Jack.Statistics.csproj" />
   </ItemGroup>
 
 </Project>

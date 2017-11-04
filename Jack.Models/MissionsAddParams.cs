@@ -6,12 +6,13 @@ namespace Jack.Models
 {
     public struct MissionsAddParams
     {
-        public Enums.Jack.Missions.Type type { get; set; }
-        public string name { get; set; }
-        public int count { get; set; }
-        public string id { get; set; }
-        public string user { get; set; }
-        public string price { get; set; }
-        public string code { get; set; }
+        public string Title { get; set; }
+        public string By { get; set; }
+        public Enums.Jack.Missions.Type Type { get; set; }
+        public string IdType { get; set; }
+        public int Count { get; set; }
+        public List<string> IdComplete { get; set; }
+        public string TimeAdd { get; set; }
+        public string Price { get; set; }
     }
 }

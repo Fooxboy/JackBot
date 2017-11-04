@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Jack.Models
 {
-    public struct Missions
+    public struct Mission
     {
-        public string Name { get; set; }
+        public string Title { get; set; }
         public int Id { get; set; }
         public string By { get; set; }
         public int Type { get; set; }
@@ -15,5 +15,12 @@ namespace Jack.Models
         public List<string> IdComplete { get; set; }
         public string TimeAdd { get; set; }
         public string Price { get; set; }
+        public bool Complete { get; set; }
+    }
+
+    public struct Missions
+    {
+        public List<Mission> Mission { get; set; }
+        public string Title { get; set; }
     }
 }

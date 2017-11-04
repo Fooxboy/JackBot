@@ -8,18 +8,17 @@ namespace Jack
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-
         }
 
         private void StartBot()
         {
             Starter starter = new Starter();
             var responseLongPoll =  starter.Start();
-
             Logger.NewEvent(responseLongPoll);
-
+            Statistics.Missions.Start();
             var render = new Render();
             render.Start(responseLongPoll);
+
         }
     }
 }
