@@ -15,5 +15,7 @@ namespace Jack.Files.Commands
                 $"❗ ЕСЛИ ВЫ НАШЛИ БАГ ИЛИ НЕДОРАБОТКУ СООБЩИТЕ РАЗРАБОТЧИКУ.";
             return text;
         }
+
+        public static string Help = "Эта команда выводит системную информацию о боте.";
     }
 }
