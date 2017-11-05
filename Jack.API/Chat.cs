@@ -6,7 +6,6 @@ namespace Jack.API
 {
     public class Chat
     {
-
         Database.Jack.Dialog chat;
         string Id;
         public Chat(string id)

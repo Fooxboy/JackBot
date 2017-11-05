@@ -16,5 +16,7 @@ namespace Jack.Files.Commands
                 $"-Привелегия: {user.Privileges}";
             return text;
         }
+
+        public static string NoUser = "Этот пользователь не является пользователем бота.";
     }
 }

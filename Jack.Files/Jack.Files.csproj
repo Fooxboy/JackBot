@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Jack.API\Jack.API.csproj" />
+    <ProjectReference Include="..\Jack.Common\Jack.Common.csproj" />
     <ProjectReference Include="..\Jack.Enums\Jack.Enums.csproj" />
   </ItemGroup>
 

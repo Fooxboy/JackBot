@@ -17,6 +17,12 @@ namespace Jack.Database.Jack
             method.Add(fields, values);
         }
 
+        public static void Delete(string id)
+        {
+            Methods method = new Methods("jack", "bans");
+            method.Delete(id);
+        }
+
         public string Time
         {
             get

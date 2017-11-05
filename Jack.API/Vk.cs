@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using VkNet;
+using Jack.Common;
 
 namespace Jack.API
 {
@@ -10,7 +11,7 @@ namespace Jack.API
         public static VkApi Auth()
         {
             var vk = new VkApi();
-            string token = Files.Jack.Token;
+            string token = Data.AccessToken;
             vk.Authorize(new ApiAuthParams
             {
                 AccessToken = token

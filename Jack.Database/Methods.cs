@@ -39,6 +39,15 @@ namespace Jack.Database
             connect.Close();
         }
 
+        public void Delete(string id)
+        {
+            connect.Open();
+            string sql = $"DELETE FROM {table} WHERE id={id}";
+            MySqlCommand command = new MySqlCommand(sql, connect);
+            command.ExecuteScalar();
+            connect.Close();
+        }
+
         public bool Check(string id)
         {
             connect.Open();
