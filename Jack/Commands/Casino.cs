@@ -87,7 +87,7 @@ namespace Jack.Commands
                 {
                     From = message.From,
                     PeerId = System.Convert.ToInt64(message.ExtraFields.PeerId),
-                    Message = Files.Commands.Casino.Help
+                    Message = Files.Commands.Casino.NoArgFoxs
                 });
             }
         }

@@ -19,39 +19,54 @@ namespace Jack.Commands
                     long chatId = API.Convert.PeerIdToChatId(message.ExtraFields.PeerId);
 
                     Chat chat = new Chat(chatId.ToString());
+
                     if (!chat.Is)
                     {
                         chat.New(message.From, getchat.Title);
-                    }            
-                    if((message.From == getchat.AdminId.ToString())||(message.From == chat.Admin))
-                    {
-                        var title = "title";
-                        try
-                        {
-                            title = arguments[2];
-                        }
-                        catch
-                        {
-                            title = getchat.Title;
-                        }
-                        chat.Name = title;
-
-                        API.Message.Send(new Models.MessageSendParams
-                        {
-                            From = message.From,
-                            PeerId = System.Convert.ToInt64(message.ExtraFields.PeerId),
-                            Message = Files.Commands.SaveTitleChat.Compete
-                        });
-                    }else
+                    } 
+                    
+                    if(chat.Block)
                     {
                         API.Message.Send(new Models.MessageSendParams
                         {
                             From = message.From,
                             PeerId = System.Convert.ToInt64(message.ExtraFields.PeerId),
-                            Message = Files.Commands.SaveTitleChat.NoAdmin
+                            Message = Files.Commands.SaveTitleChat.TitleBlocked
                         });
                     }
-                }else
+                    else
+                    {
+                        if ((message.From == getchat.AdminId.ToString()) || (message.From == chat.Admin))
+                        {
+                            var title = "title";
+                            try
+                            {
+                                title = arguments[2];
+                            }
+                            catch
+                            {
+                                title = getchat.Title;
+                            }
+                            chat.Name = title;
+
+                            API.Message.Send(new Models.MessageSendParams
+                            {
+                                From = message.From,
+                                PeerId = System.Convert.ToInt64(message.ExtraFields.PeerId),
+                                Message = Files.Commands.SaveTitleChat.Compete
+                            });
+                        }
+                        else
+                        {
+                            API.Message.Send(new Models.MessageSendParams
+                            {
+                                From = message.From,
+                                PeerId = System.Convert.ToInt64(message.ExtraFields.PeerId),
+                                Message = Files.Commands.SaveTitleChat.NoAdmin
+                            });
+                        }
+                    }
+                } else
                 {
                     API.Message.Send(new Models.MessageSendParams
                     {

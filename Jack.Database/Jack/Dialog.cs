@@ -47,5 +47,16 @@ namespace Jack.Database.Jack
                 return method.Check(Id);
             }
         }
+
+        public string Block
+        {
+            get
+            {
+                return method.GetFromId(Id, "Block");
+            }set
+            {
+                method.EditField(Id, "Block", Block);
+            }
+        }
     }
 }

@@ -53,5 +53,29 @@ namespace Jack.API
                 return chat.IsDialog;
             }
         }
+
+        public bool Block
+        {
+            get
+            {
+                string result = chat.Block;
+                if(result == "0")
+                {
+                    return false;
+                }else
+                {
+                    return true;
+                }
+            }set
+            {
+                if(Block)
+                {
+                    chat.Block = "1";
+                }else
+                {
+                    chat.Block = "0";
+                }
+            }
+        }
     }
 }
