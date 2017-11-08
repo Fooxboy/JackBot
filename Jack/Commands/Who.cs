@@ -22,7 +22,6 @@ namespace Jack.Commands
                 int i = random.Next(count);
                 int index = i - 1;
                 long id_user = users[index];
-
                 string comment;
                 try
                 {

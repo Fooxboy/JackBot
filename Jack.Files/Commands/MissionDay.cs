@@ -6,6 +6,25 @@ namespace Jack.Files.Commands
 {
     public static class MissionDay
     {
+        public static string NoStartGame = "ЕЗ в этой групповой беседе не включено!";
+        public static string GuessMissionToday = "В этой групповой беседе ЕЗ за сегодня выполнено!";
+        public static string GameStarted = "ЕЗ в этой групповой беседе ещё не разгадано!";
+        public static string Error = "Неизвестная ошибка.";
+        public static string Winner(string count)
+        {
+            string text = $"Поздравляю! Вы успешно выполнили ЕЗ. Ваша награда: {count} фоксов.";
+            return text;
+        }
+        public static string Loser = "Вы указали слово неверно!";
+        public static string WordGenereted(string quessions)
+        {
+            string text;
+            text = "И ТАК ВОПРОС:" +
+                $"{quessions}";
+            return text;
+        }
+        public static string NoCommand = "Вы не указали нужную подкоманду для этой команды!";
+
         public static string[] quessions =
         {
             "Зимой – серый, летом – белый. Кто это?",
