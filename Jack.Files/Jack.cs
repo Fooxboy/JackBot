@@ -6,7 +6,7 @@ namespace Jack.Files
 {
     public static class Jack
     {
-        public static string Version = "0.2.4";
+        public static string Version = "0.2.5";
         public static string Build = "08.11.2017";
         public static string Token = Data.AccessToken;
     }

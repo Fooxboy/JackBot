@@ -58,5 +58,16 @@ namespace Jack.Database.Jack
                 method.EditField(Id, "Block", Block);
             }
         }
+
+        public string MissionDay
+        {
+            get
+            {
+                return method.GetFromId(Id, "MissionDay");
+            }set
+            {
+                method.EditField(Id, "MissionDay", MissionDay);
+            }
+        }
     }
 }

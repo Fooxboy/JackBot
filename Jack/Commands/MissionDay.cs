@@ -37,9 +37,20 @@ namespace Jack.Commands
             }
         }
 
-        private static void NewWord()
+        private static void NewWord(string peer_id)
         {
+            long chat_id = API.Convert.PeerIdToChatId(peer_id);
+            var chat = new API.Chat(chat_id.ToString());
 
+            if(!chat.Is)
+            {
+                chat.New();
+            }
+
+            if(chat.MissionDay.Type == Enums.API.MissionDayType.NoMissionToday)
+            {
+
+            }
         }
 
         private static void GuessWord()
