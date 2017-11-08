@@ -36,5 +36,20 @@ namespace Jack.Commands
                 }
             }
         }
+
+        private static void NewWord()
+        {
+
+        }
+
+        private static void GuessWord()
+        {
+
+        }
+
+        public static void Trigger()
+        {
+
+        }
     }
 }
