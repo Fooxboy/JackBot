@@ -97,7 +97,6 @@ namespace Jack.Commands
             string text;
             if(chat.MissionDay.Type == Enums.API.MissionDayType.WordMission)
             {
-                //всё норм.
                 if(chat.MissionDay.Word == result)
                 {
                     text = Files.Commands.MissionDay.Winner("11");
