@@ -11,7 +11,7 @@ namespace Jack.Commands
     {
         public static void Start(Update.NewMessage message, string[] arguments)
         {
-            string text;
+            string text = "Ошибка.";
             if(message.From == "308764786")
             {
                 if(arguments.Length >= 3)
@@ -58,6 +58,13 @@ namespace Jack.Commands
             {
                 text = Files.Commands.Rights.NoAccess;
             }
+
+            API.Message.Send(new Models.MessageSendParams
+            {
+                From = message.From,
+                PeerId = System.Convert.ToInt64(message.ExtraFields.PeerId),
+                Message = text
+            });
         }
 
         private static string Set(string from, string privileges)
