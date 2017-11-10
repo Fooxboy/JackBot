@@ -21,13 +21,11 @@ namespace Jack
 
             }else
             {
-                //Ничего не делаем.
+
             }
         }
-
         private void NewMessage(Update.NewMessage message)
         {
-
             if(message.ExtraFields.Attach.source_act !=null)
             {
                 if(message.ExtraFields.Attach.source_act == "chat_title_update")
@@ -35,11 +33,9 @@ namespace Jack
                     Commands.SaveTitleChat.TriggerEditChat(message);
                 }
             }
-
             string[] arrayTextMessage = Split(message.ExtraFields.Text);
-
             string name = arrayTextMessage[0].ToLower();
-            if((name == "джек")||(name == "jack")|| (name == "джек,"))
+            if((name == "джек")||(name == "jack")|| (name == "джек,") || (name == "jack,"))
             {
                 var user = new User(message.From);
                 bool isUser = user.IsUser;
@@ -47,7 +43,6 @@ namespace Jack
                 {
                    if(!user.Ban)
                    {
-                        //Отвечаем на сообщение. 
                         ChoiseCommand(message, arrayTextMessage);
                    }
                 }else
@@ -72,7 +67,23 @@ namespace Jack
                         break;
                     case "команды":
                         break;
+                    default:
+                        API.Message.Send(new Models.MessageSendParams
+                        {
+                            From = message.From,
+                            PeerId = System.Convert.ToInt64(message.ExtraFields.PeerId),
+                            Message = Files.Render.NoVoiceModule
+                        });
+                        break;
                 }
+            }else
+            {
+                API.Message.Send(new Models.MessageSendParams
+                {
+                    From = message.From,
+                    PeerId = System.Convert.ToInt64(message.ExtraFields.PeerId),
+                    Message = Files.Render.NoCommand
+                });
             }
         }
 
