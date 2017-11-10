@@ -7,6 +7,7 @@ using Jack.API;
 
 namespace Jack
 {
+    //TODO: Заменить обработку команд на нормальную.
     public class Render
     {
         public void Start(ResponseLongPoll model)
