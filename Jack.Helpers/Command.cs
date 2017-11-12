@@ -9,7 +9,7 @@ namespace Jack.Helpers
     {
         public static bool CanExecute(this ICommand comand, string com)
         {
-            if (com == comand.Name)
+            if (com == comand.Name.ToLower())
             {
                 return true;
             }

@@ -71,22 +71,19 @@ namespace Jack
                         c.Execute(message, array);
                         result = true;
                         break;
-                    } else
-                    {
-                        //Неверная команда типа.
-                    }
-
-                    if(!result)
-                    {
-                        API.Message.Send(new Models.MessageSendParams
-                        {
-                            From = message.From,
-                            PeerId = System.Convert.ToInt64(message.ExtraFields.PeerId),
-                            Message = Files.Render.NoVoiceModule
-                        });
-                    } 
+                    }  
                 }
-            }else
+                if (!result)
+                {
+                    API.Message.Send(new Models.MessageSendParams
+                    {
+                        From = message.From,
+                        PeerId = System.Convert.ToInt64(message.ExtraFields.PeerId),
+                        Message = Files.Render.NoVoiceModule
+                    });
+                }
+            }
+            else
             {
                 API.Message.Send(new Models.MessageSendParams
                 {
