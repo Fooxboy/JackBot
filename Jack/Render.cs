@@ -38,6 +38,7 @@ namespace Jack
             }
             string[] arrayTextMessage = Split(message.ExtraFields.Text);
             string name = arrayTextMessage[0].ToLower();
+            //TODO: Заменить регуляркой.
             if((name == "джек")||(name == "jack")|| (name == "джек,") || (name == "jack,"))
             {
                 var user = new User(message.From);
