@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Text;
 using Jack.Models.LongPoll;
 using Jack.API;
+using Jack.Interfaces;
 
 namespace Jack.Commands
 {
-    public static class Nick
+    public  class Nick :ICommand
     {
-        public static void Start(Update.NewMessage message, string[] arguments)
+        public string Name => "Ник";
+        public string Help => "Помощь";
+        public void Execute(Update.NewMessage message, string[] arguments)
         {
             if(arguments.Length >= 3)
             {

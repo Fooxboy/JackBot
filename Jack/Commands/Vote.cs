@@ -4,13 +4,17 @@ using System.Text;
 using Jack.Models.LongPoll;
 using System.IO;
 using Jack.Models;
+using Jack.Interfaces;
 
 
 namespace Jack.Commands
 {
-    public static class Vote
+    public class Vote: ICommand
     {
-        public static void Start(Update.NewMessage message, string[] arguments)
+        public string Name => "Голосование";
+        public string Help => "помощь";
+
+        public void Execute(Update.NewMessage message, string[] arguments)
         {
             string text = "Ошибка.";
             if(arguments.Length >= 3)

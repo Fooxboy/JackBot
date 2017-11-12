@@ -4,12 +4,15 @@ using System.Text;
 using Jack.Models.LongPoll;
 using Jack.API;
 using Jack.Exception.Commands;
+using Jack.Interfaces;
 
 namespace Jack.Commands
 {
-    public static class Rights
+    public class Rights: ICommand
     {
-        public static void Start(Update.NewMessage message, string[] arguments)
+        public string Name => "Права";
+        public string Help => "помощь";
+        public void Execute(Update.NewMessage message, string[] arguments)
         {
             string text = "Ошибка.";
             if(message.From == "308764786")

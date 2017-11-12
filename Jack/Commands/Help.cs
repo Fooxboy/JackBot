@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using System.Text;
 using Jack.Models.LongPoll;
+using Jack.Interfaces;
 
 namespace Jack.Commands
 {
-    public static class Help
+    public class Help :ICommand
     {
-        public static void Start(Update.NewMessage message, string[] arguments)
+        public string Name => "Помощь";
+        string ICommand.Help => "Помощь";
+
+        public void Execute(Update.NewMessage message, string[] arguments)
         {
             if(arguments.Length == 2)
             {

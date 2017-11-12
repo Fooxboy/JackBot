@@ -4,12 +4,16 @@ using System.Text;
 using Jack.API;
 using Jack.Models.LongPoll;
 using Jack.Models.API;
+using Jack.Interfaces;
 
 namespace Jack.Commands
 {
-    public static class Ban
+    public class Ban : ICommand
     {
-        public static void Start(Update.NewMessage message, string[] arguments)
+        public string Name => "Бан";
+        public string Help => "Помощь";
+
+        public void Execute(Update.NewMessage message, string[] arguments)
         {
             var userFrom = new User(message.From);
             if(userFrom.Privileges != Enums.Jack.Privileges.User)

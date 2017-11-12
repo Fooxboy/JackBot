@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using System.Text;
 using Jack.Models.LongPoll;
 using Jack.API;
+using Jack.Interfaces;
 
 namespace Jack.Commands
 {
-    public static class Profile
+    public class Profile:ICommand
     {
-        public static void Start(Update.NewMessage message, string[] arguments) 
+        public string Name => "профиль";
+        public string Help => "помощь";
+
+        public void Execute(Update.NewMessage message, string[] arguments) 
         {
             long? user_id;
             if(arguments.Length == 3)

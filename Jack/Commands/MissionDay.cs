@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using System.Text;
 using Jack.Models.LongPoll;
+using Jack.Interfaces;
 
 namespace Jack.Commands
 {
-    public static class MissionDay
+    public class MissionDay: ICommand
     {
-        public static void Start(Update.NewMessage message, string[] arguments)
+        public string Name => "ЕЗ";
+        public string Help => "помощь";
+
+        public void Execute(Update.NewMessage message, string[] arguments)
         {
             //TODO: Переписать костыли.
             string command = "-";

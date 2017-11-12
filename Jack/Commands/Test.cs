@@ -14,7 +14,7 @@ namespace Jack.Commands
 
         public void Execute(Update.NewMessage message, string[] argumetns)
         {
-            
+            //
         }
     }
 }

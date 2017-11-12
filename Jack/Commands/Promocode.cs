@@ -4,14 +4,20 @@ using System.Text;
 using Jack.Models.LongPoll;
 using System.IO;
 using Newtonsoft.Json;
+using Jack.Interfaces;
+using Jack.Exception.Commands;
 
 namespace Jack.Commands
 {
     //TODO: Закончить работу с промокодами.
-    public static class Promocode
+    public  class Promocode :ICommand
     {
-        public static void Start(Update.NewMessage message, string[] arguments)
+        public string Name => "Промокод";
+        public string Help => "помощь";
+        public void Execute(Update.NewMessage message, string[] arguments)
         {
+            throw new CommandIsNotWorked();
+
             if(arguments.Length >= 3)
             {
                 string command = arguments[2];
