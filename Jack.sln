@@ -23,7 +23,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jack.Yandex", "Jack.Yandex\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jack.Statistics", "Jack.Statistics\Jack.Statistics.csproj", "{A020D43A-7506-4BEB-BA46-D6CA831346B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jack.Common", "Jack.Common\Jack.Common.csproj", "{7B1C63B0-89F8-4266-8D6A-2D1CA65A5582}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jack.Common", "Jack.Common\Jack.Common.csproj", "{7B1C63B0-89F8-4266-8D6A-2D1CA65A5582}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jack.Interfaces", "Jack.Interfaces\Jack.Interfaces.csproj", "{B63B412A-DD33-46B3-A14F-6FBB5A1640DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jack.Helpers", "Jack.Helpers\Jack.Helpers.csproj", "{B190D5B9-8616-415D-B8F5-19EC6E9913F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +79,14 @@ Global
 		{7B1C63B0-89F8-4266-8D6A-2D1CA65A5582}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B1C63B0-89F8-4266-8D6A-2D1CA65A5582}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B1C63B0-89F8-4266-8D6A-2D1CA65A5582}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B63B412A-DD33-46B3-A14F-6FBB5A1640DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B63B412A-DD33-46B3-A14F-6FBB5A1640DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B63B412A-DD33-46B3-A14F-6FBB5A1640DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B63B412A-DD33-46B3-A14F-6FBB5A1640DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B190D5B9-8616-415D-B8F5-19EC6E9913F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B190D5B9-8616-415D-B8F5-19EC6E9913F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B190D5B9-8616-415D-B8F5-19EC6E9913F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B190D5B9-8616-415D-B8F5-19EC6E9913F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

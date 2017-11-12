@@ -4,6 +4,8 @@ using System.Text;
 using Jack.Models.LongPoll;
 using Jack.LongPoll;
 using Jack.API;
+using Jack.Interfaces;
+using Jack.Helpers;
 
 namespace Jack
 {
@@ -56,26 +58,32 @@ namespace Jack
 
         private void ChoiseCommand(Update.NewMessage message, string[] array)
         {
-            if(array.Length != 1)
+            if (array.Length != 1)
             {
                 string command = array[1].ToLower();
-                switch(command)
+                List<ICommand> commands = Bot.Commands;
+                var result = false;
+                foreach (var c in commands)
                 {
-                    case "оботе":
-                        Commands.About.Start(message, array);
+                    if (c.CanExecute(command))
+                    {
+                        c.Execute(message, array);
+                        result = true;
                         break;
-                    case "помощь":
-                        break;
-                    case "команды":
-                        break;
-                    default:
+                    } else
+                    {
+                        //Неверная команда типа.
+                    }
+
+                    if(!result)
+                    {
                         API.Message.Send(new Models.MessageSendParams
                         {
                             From = message.From,
                             PeerId = System.Convert.ToInt64(message.ExtraFields.PeerId),
                             Message = Files.Render.NoVoiceModule
                         });
-                        break;
+                    } 
                 }
             }else
             {
