@@ -24,7 +24,7 @@ namespace Jack.API
                 return user.Name;
             }set
             {
-                user.Name = Name;
+                user.Name = value;
             }
         }
 
@@ -43,7 +43,7 @@ namespace Jack.API
                 return user.Ban;
             } set
             {
-                user.Ban = Ban;
+                user.Ban = value;
             }
         }
 
@@ -54,7 +54,7 @@ namespace Jack.API
                 return System.Convert.ToInt32(user.Money);
             }set
             {
-                user.Money = Foxs.ToString();
+                user.Money = value.ToString();
             }
         }
 
@@ -89,7 +89,7 @@ namespace Jack.API
 
             }set
             {
-                int priv = (int)Privileges;
+                int priv = (int)value;
                 user.Privileges = priv.ToString();
             }
         }

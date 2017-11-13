@@ -26,7 +26,7 @@ namespace Jack.Database.Jack
             }
             set
             {
-                method.EditField(Id, "Name", Name);
+                method.EditField(Id, "Name", value);
             }
         }
         public string Admin
@@ -37,7 +37,7 @@ namespace Jack.Database.Jack
             }
             set
             {
-                method.EditField(Id, "Admin", Admin);
+                method.EditField(Id, "Admin", value);
             }
         }
         public bool IsDialog
@@ -55,7 +55,7 @@ namespace Jack.Database.Jack
                 return method.GetFromId(Id, "Block");
             }set
             {
-                method.EditField(Id, "Block", Block);
+                method.EditField(Id, "Block", value);
             }
         }
 
@@ -66,7 +66,7 @@ namespace Jack.Database.Jack
                 return method.GetFromId(Id, "MissionDay");
             }set
             {
-                method.EditField(Id, "MissionDay", MissionDay);
+                method.EditField(Id, "MissionDay", value);
             }
         }
     }

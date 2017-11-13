@@ -8,7 +8,7 @@ namespace Jack.Commands
 {
     public class TestExecute : ICommand
     {
-        public string Name => "test";
+        public string Name => "testExecute";
 
         public string Help => "помощь";
 

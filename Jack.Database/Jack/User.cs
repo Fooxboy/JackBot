@@ -26,7 +26,7 @@ namespace Jack.Database.Jack
             }
             set
             {
-                method.EditField(Id, "Name", Name);
+                method.EditField(Id, "Name", value);
             }
         }
         public bool Ban
@@ -47,7 +47,7 @@ namespace Jack.Database.Jack
             set
             {
                 var values = "0";
-                if (Ban == true)
+                if (value == true)
                 {
                     values = "1";
                 }
@@ -70,7 +70,7 @@ namespace Jack.Database.Jack
             }
             set
             {
-                method.EditField(Id, "Privileges", Privileges);
+                method.EditField(Id, "Privileges", value);
             }
         }
         public string PrivilegesTime
@@ -82,7 +82,7 @@ namespace Jack.Database.Jack
             }
             set
             {
-                method.EditField(Id, "PrivilegesTime", PrivilegesTime);
+                method.EditField(Id, "PrivilegesTime", value);
             }
         }
 
@@ -94,7 +94,7 @@ namespace Jack.Database.Jack
             }
             set
             {
-                method.EditField(Id, "Money", PrivilegesTime);
+                method.EditField(Id, "Money", value);
             }
         }
 

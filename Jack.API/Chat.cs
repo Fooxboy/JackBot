@@ -8,7 +8,7 @@ namespace Jack.API
     public class Chat
     {
         Database.Jack.Dialog chat;
-        string Id;
+        public string Id;
         public Chat(string id)
         {
             chat = new Database.Jack.Dialog()
@@ -32,7 +32,7 @@ namespace Jack.API
                 return chat.Name;
             }set
             {
-                chat.Name = Name;
+                chat.Name = value;
             }
         }
 
@@ -43,7 +43,7 @@ namespace Jack.API
                 return chat.Admin;
             }set
             {
-                chat.Admin = Admin;
+                chat.Admin = value;
             }
         }
 
@@ -69,7 +69,7 @@ namespace Jack.API
                 }
             }set
             {
-                if(Block)
+                if(value)
                 {
                     chat.Block = "1";
                 }else
@@ -102,7 +102,7 @@ namespace Jack.API
                 return model;
             }set
             {
-                var model = MissionDay;
+                var model = value;
                 string text;
 
                 if(model.Type == Enums.API.MissionDayType.NoMissionToday)

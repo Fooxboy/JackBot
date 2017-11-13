@@ -8,7 +8,7 @@ namespace Jack
 {
     public static class Bot
     {
-        public static List<ICommand> Commands = null;
+        public static List<ICommand> Commands = new List<ICommand>();
         public static void InitializationCommand()
         {
             Commands.Add(new TestExecute());
@@ -27,6 +27,7 @@ namespace Jack
             Commands.Add(new Vote());
             Commands.Add(new When());
             Commands.Add(new Who());
+            
             Commands.Add(new Community());
         }
     }
