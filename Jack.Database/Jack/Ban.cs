@@ -31,7 +31,7 @@ namespace Jack.Database.Jack
             }
             set
             {
-                method.EditField(Id, "Time", Time);
+                method.EditField(Id, "Time", value);
             }
         }
         public string From
@@ -42,7 +42,7 @@ namespace Jack.Database.Jack
             }
             set
             {
-                method.EditField(Id, "From", From);
+                method.EditField(Id, "From", value);
             }
         }
         public string Count
@@ -53,7 +53,7 @@ namespace Jack.Database.Jack
             }
             set
             {
-                method.EditField(Id, "Count", Count);
+                method.EditField(Id, "Count", value);
             }
         }
     }

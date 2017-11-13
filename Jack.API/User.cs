@@ -94,6 +94,17 @@ namespace Jack.API
             }
         }
 
+        public string Community
+        {
+            get
+            {
+                return user.Community;
+            }set
+            {
+                user.Community = value;
+            }
+        }
+
         public void New(Enums.Jack.Privileges modelPrivileges, string time = "-1")
         {
             string id = Id;

@@ -40,7 +40,7 @@ namespace Jack.API
                 return ban.From;
             }set
             {
-                ban.From = From;
+                ban.From = value;
             }
         }
 
@@ -51,7 +51,7 @@ namespace Jack.API
                 return ban.Time;
             }set
             {
-                ban.Time = Time;
+                ban.Time = value;
             }
         }
 
@@ -62,7 +62,7 @@ namespace Jack.API
                 return ban.Count;
             }set
             {
-                ban.Count = Count;
+                ban.Count = value;
             }
         }
     }

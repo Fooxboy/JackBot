@@ -12,9 +12,9 @@ namespace Jack.Database.Jack
         public static void Add(string id, string name, string Privileges, string PrivilegesTime)
         {
             Methods method = new Methods("jack", "users");
-            string fields = @"`id`, `Name`, `Ban`, `Is`, `Privileges`, `PrivilegesTime`";
+            string fields = @"`id`, `Name`, `Ban`, `Is`, `Privileges`, `PrivilegesTime`, `Money`, `Community`";
             string first_name = name;
-            string values = $@"'{id}', '{first_name}','0', '1', '{Privileges}', '{PrivilegesTime}'";
+            string values = $@"'{id}', '{first_name}','0', '1', '{Privileges}', '{PrivilegesTime}', '0', '0'";
             method.Add(fields, values);
         }
 
@@ -85,6 +85,7 @@ namespace Jack.Database.Jack
                 method.EditField(Id, "PrivilegesTime", PrivilegesTime);
             }
         }
+
         public string Money
         {
             get
@@ -96,5 +97,17 @@ namespace Jack.Database.Jack
                 method.EditField(Id, "Money", PrivilegesTime);
             }
         }
+
+        public string Community
+        {
+            get
+            {
+                return method.GetFromId(Id, "Community");
+            }set
+            {
+                method.EditField(Id, "Community", value);
+            }
+        }
+
     }
 }
