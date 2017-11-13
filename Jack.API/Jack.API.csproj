@@ -15,4 +15,10 @@
     <ProjectReference Include="..\Jack.Models\Jack.Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="xNet">
+      <HintPath>..\..\..\..\Desktop\xNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

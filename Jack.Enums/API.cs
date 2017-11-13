@@ -13,5 +13,11 @@ namespace Jack.Enums
             WordMission = 3,
             NoStartGame = 4
         }
+
+        public enum TypeDownload
+        {
+            Meme =1,
+            Other =2
+        }
     }
 }
