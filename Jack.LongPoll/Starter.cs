@@ -14,10 +14,13 @@ namespace Jack.LongPoll
 
         public ResponseLongPoll Start()
         {
+            Console.WriteLine("Старт");
             SetKeyAndServer();
 
-            while(true)
+            Console.WriteLine("Перед циклом");
+            while (true)
             {
+                Console.WriteLine("Цикл");
                 var response = Main();
                 return response;
             } 
@@ -25,17 +28,25 @@ namespace Jack.LongPoll
 
         private void SetKeyAndServer()
         {
+            Console.WriteLine("УстановкаКЕЙиСЕРВЕР");
             var longPollServer = new GetLongPollServer();
+            Console.WriteLine("ПОлучение модели");
             var model = longPollServer.Start();
+            Console.WriteLine("Установка кей сервер и т.п");
             key = model.key;
             server = model.server;
             ts = model.ts;
+            Console.WriteLine($"кей сервер хуй {key} {server} {ts}");
+
+            Console.WriteLine($"кей сервер с модели {model.key}, {model.server}, {model.ts}");
         }
 
         private ResponseLongPoll Main()
         {
+            //Console.WriteLine("Модель респ");
             var MainModel = new ResponseLongPoll();
 
+            Console.WriteLine($"кей серер ещё раз: {server} {key} {ts}");
             GetJsonLongPoll objectJson = new GetJsonLongPoll()
             {
                 Server = server,
@@ -43,8 +54,10 @@ namespace Jack.LongPoll
                 Ts = ts
             };
 
+            Console.WriteLine("Получение дсон лонг пулла.");
             string json = objectJson.Start();
 
+            Console.WriteLine("Обработка ошибок.. и т.д");
             RootLongPoll objectLongPoll = null;
             try
             {
@@ -62,8 +75,8 @@ namespace Jack.LongPoll
                 {
                     for (int i = 0; i < LongPoll.Count; i++)
                     {
-                        
-                        int code = Convert.ToInt32((string)LongPoll[i][0]);
+                        var codeStr = (string)LongPoll[i][0];
+                        int code = Int32.Parse(codeStr);
                         try
                         {
                             ResponseModelLongPoll ModelLongPoll = GetModelLongPoll.Start(code.ToString(), LongPoll[i]);

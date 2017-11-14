@@ -9,6 +9,7 @@ namespace Jack
         static void Main(string[] args)
         {
             //Инициализация.
+            Console.WriteLine("Бот стартед.");
             Statistics.Missions.Start();
             Console.Title = $"JackBot Run. Version {Files.Jack.Version}";
             Bot.InitializationCommand();
@@ -16,6 +17,7 @@ namespace Jack
             Thread ThreadLongPoll = new Thread(StartBot);
             ThreadLongPoll.Name = "LongPoll";
             ThreadLongPoll.Start(); 
+            StartBot();
         }
 
         private static void StartBot()

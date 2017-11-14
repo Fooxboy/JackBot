@@ -10,4 +10,11 @@ namespace Jack.Models.LongPoll
         public string server { get; set; }
         public string ts { get; set; }
     }
+
+    public class Response
+    {
+        public GetLongPollServer response { get; set; }
+    }
+
+   
 }
