@@ -30,6 +30,7 @@ namespace Jack
             
             Commands.Add(new Community());
             Commands.Add(new Meme());
+            Commands.Add(new Story());
         }
     }
 }

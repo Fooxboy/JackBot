@@ -25,7 +25,6 @@ namespace Jack.Commands
             else
             {
                 string command = arguments[2];
-                //Вывод справки по командам.
                 string help;
                 switch(command.ToLower())
                 {

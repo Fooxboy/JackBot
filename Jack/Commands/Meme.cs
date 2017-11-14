@@ -23,12 +23,10 @@ namespace Jack.Commands
                 "-146716837",
                 "-113502491"
             };
-
             var rand = new Random();
             int index = rand.Next(0, groups.Length-1);
             long group = Int64.Parse(groups[index]);
             ulong count = 30;
-
             var wallObj = vk.Wall.Get(new VkNet.Model.RequestParams.WallGetParams()
             {
                 OwnerId = group,
@@ -36,7 +34,6 @@ namespace Jack.Commands
                 Filter = VkNet.Enums.SafetyEnums.WallFilter.Owner,
                 Extended = false
             });
-
             int index2 = getIntPost(wallObj, count);
             var post = wallObj.WallPosts[index2];
             var image = (VkNet.Model.Attachments.Photo)post.Attachment.Instance;
@@ -58,7 +55,6 @@ namespace Jack.Commands
                 var random = new Random();
                 int result = random.Next(0, System.Convert.ToInt32(count)-1);
                 var post = wallObj.WallPosts[result];
-
                 var type = post.Attachment.Type;
                 if (type == typeof(VkNet.Model.Attachments.Photo))
                 {
@@ -68,10 +64,8 @@ namespace Jack.Commands
                 else
                 {
                     value = false;
-                }
-                
+                }     
             }
-
             return i;
         }
 
