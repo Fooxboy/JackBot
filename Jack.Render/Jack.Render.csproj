@@ -1,25 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="VkNet" Version="1.29.2" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Jack.API\Jack.API.csproj" />
     <ProjectReference Include="..\Jack.Commands\Jack.Commands.csproj" />
-    <ProjectReference Include="..\Jack.Enums\Jack.Enums.csproj" />
-    <ProjectReference Include="..\Jack.Exception\Jack.Exception.csproj" />
     <ProjectReference Include="..\Jack.Files\Jack.Files.csproj" />
     <ProjectReference Include="..\Jack.Helpers\Jack.Helpers.csproj" />
     <ProjectReference Include="..\Jack.Interfaces\Jack.Interfaces.csproj" />
-    <ProjectReference Include="..\Jack.LongPoll\Jack.LongPoll.csproj" />
     <ProjectReference Include="..\Jack.Models\Jack.Models.csproj" />
-    <ProjectReference Include="..\Jack.Statistics\Jack.Statistics.csproj" />
   </ItemGroup>
 
 </Project>

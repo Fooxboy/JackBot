@@ -27,7 +27,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jack.Common", "Jack.Common\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jack.Interfaces", "Jack.Interfaces\Jack.Interfaces.csproj", "{B63B412A-DD33-46B3-A14F-6FBB5A1640DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jack.Helpers", "Jack.Helpers\Jack.Helpers.csproj", "{B190D5B9-8616-415D-B8F5-19EC6E9913F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jack.Helpers", "Jack.Helpers\Jack.Helpers.csproj", "{B190D5B9-8616-415D-B8F5-19EC6E9913F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jack.Render", "Jack.Render\Jack.Render.csproj", "{D3121952-48E1-4D61-A150-F414923F007F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jack.Commands", "Jack.Commands\Jack.Commands.csproj", "{1A6C9AC7-004D-43AD-A1B0-47B6ADB3D2C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +91,14 @@ Global
 		{B190D5B9-8616-415D-B8F5-19EC6E9913F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B190D5B9-8616-415D-B8F5-19EC6E9913F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B190D5B9-8616-415D-B8F5-19EC6E9913F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3121952-48E1-4D61-A150-F414923F007F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3121952-48E1-4D61-A150-F414923F007F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3121952-48E1-4D61-A150-F414923F007F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3121952-48E1-4D61-A150-F414923F007F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A6C9AC7-004D-43AD-A1B0-47B6ADB3D2C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A6C9AC7-004D-43AD-A1B0-47B6ADB3D2C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A6C9AC7-004D-43AD-A1B0-47B6ADB3D2C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A6C9AC7-004D-43AD-A1B0-47B6ADB3D2C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -12,7 +12,7 @@ namespace Jack
             Console.WriteLine("Бот стартед.");
             Statistics.Missions.Start();
             Console.Title = $"JackBot Run. Version {Files.Jack.Version}";
-            Bot.InitializationCommand();
+            Jack.Commands.InitializationCommands.Initialization();
 
             Thread ThreadLongPoll = new Thread(StartBot);
             ThreadLongPoll.Name = "LongPoll";
@@ -22,23 +22,18 @@ namespace Jack
 
         private static void StartBot()
         {
-            while(true)
+            Starter starter = new Starter();
+            while (true)
             {
-                Starter starter = new Starter();
-                var responseLongPoll = starter.Start();
-                Logger.NewEvent(responseLongPoll);
-                
-                var ThreadRender = new Thread(new ParameterizedThreadStart(RenderMode));
-                ThreadRender.Name = "Render Message";
-                ThreadRender.Start(responseLongPoll);
+                starter.Start();
             }      
         }
 
-        private static void RenderMode(object res)
-        {
-            var responseLongPoll = (ResponseLongPoll)res;
-            var render = new Render();
-            render.Start(responseLongPoll);
-        }
+        //private static void RenderMode(object res)
+        //{
+        //    var responseLongPoll = (ResponseLongPoll)res;
+        //    var render = new Render();
+        //    render.Start(responseLongPoll);
+        //}
     }
 }

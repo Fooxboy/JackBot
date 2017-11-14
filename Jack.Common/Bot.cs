@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Jack.Interfaces;
-using Jack.Commands;
 
-namespace Jack
+namespace Jack.Common
 {
-    public static class Bot
+    class Bot
     {
-
         //Переехали в Jack.Commands.InitializationCommands
-       
+
     }
 }

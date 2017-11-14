@@ -5,21 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\Jack.API\Jack.API.csproj" />
     <ProjectReference Include="..\Jack.Enums\Jack.Enums.csproj" />
     <ProjectReference Include="..\Jack.Exception\Jack.Exception.csproj" />
     <ProjectReference Include="..\Jack.Files\Jack.Files.csproj" />
+    <ProjectReference Include="..\Jack.Interfaces\Jack.Interfaces.csproj" />
     <ProjectReference Include="..\Jack.Models\Jack.Models.csproj" />
-    <ProjectReference Include="..\Jack.Render\Jack.Render.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="xNet">
-      <HintPath>..\..\..\..\Desktop\xNet.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>
