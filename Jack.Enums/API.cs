@@ -17,7 +17,8 @@ namespace Jack.Enums
         public enum TypeDownload
         {
             Meme =1,
-            Other =2
+            Picture =2,
+            Ebalo = 3
         }
     }
 }

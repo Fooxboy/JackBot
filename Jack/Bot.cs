@@ -31,6 +31,8 @@ namespace Jack
             Commands.Add(new Community());
             Commands.Add(new Meme());
             Commands.Add(new Story());
+            Commands.Add(new Picture());
+            Commands.Add(new Ebalo());
         }
     }
 }

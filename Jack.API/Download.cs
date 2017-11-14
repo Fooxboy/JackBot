@@ -16,6 +16,12 @@ namespace Jack.API
                 if(type == Enums.API.TypeDownload.Meme)
                 {
                     name += "Meme_";
+                }else if(type == Enums.API.TypeDownload.Picture)
+                {
+                    name += "Picture_";
+                }else if(type == Enums.API.TypeDownload.Ebalo)
+                {
+                    name += "Ebalo_";
                 }
 
                 var random = new Random();
