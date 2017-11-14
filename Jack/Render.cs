@@ -6,6 +6,7 @@ using Jack.LongPoll;
 using Jack.API;
 using Jack.Interfaces;
 using Jack.Helpers;
+using System.Threading;
 
 namespace Jack
 {
@@ -68,7 +69,15 @@ namespace Jack
                 {
                     if (c.CanExecute(command))
                     {
-                        c.Execute(message, array);
+                        var model = new RunCommandThread
+                        {
+                            command = c,
+                            arguments = array,
+                            message = message
+                        };
+                        var ThreadCommand = new Thread(new ParameterizedThreadStart(RunRenderCommand));
+                        ThreadCommand.Name = "Render Command";
+                        ThreadCommand.Start(model);
                         result = true;
                         break;
                     }  
@@ -94,10 +103,25 @@ namespace Jack
             }
         }
 
+        private static void RunRenderCommand(object response)
+        {
+            var model = (RunCommandThread)response;
+            var message = model.message;
+            var array = model.arguments;
+            model.command.Execute(message, array);
+        }
+
         private string[] Split(string message)
         {
             string[] response = message.Split(' ');
             return response;
         }
+    }
+
+    public class RunCommandThread
+    {
+        public ICommand command { get; set; }
+        public Update.NewMessage message { get; set; }
+        public string[] arguments { get; set; }
     }
 }

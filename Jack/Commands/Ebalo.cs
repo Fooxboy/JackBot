@@ -13,7 +13,6 @@ namespace Jack.Commands
 
         public void Execute(Update.NewMessage message, string[] arguments)
         {
-            //RUN!
             var vk = Vk.Auth();
             long[] groups =
             {
