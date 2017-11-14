@@ -33,5 +33,14 @@ namespace Jack.API
                 CaptchaSid = sendParams.CaptchaSid
             });
         }
+
+        public static void SendPhoto(System.Collections.ObjectModel.ReadOnlyCollection<VkNet.Model.Attachments.Photo> photo)
+        {
+            var vk = Vk.Auth();
+            vk.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
+            {
+                Attachments = photo
+            });
+        }
     }
 }

@@ -4,6 +4,7 @@ using System.Text;
 using Jack.Interfaces;
 using Jack.Models.LongPoll;
 using Jack.API;
+using Newtonsoft.Json;
 
 namespace Jack.Commands
 {
@@ -41,7 +42,9 @@ namespace Jack.Commands
             var image_url = image.Photo604;
             var file = Download.Photo(image_url, Enums.API.TypeDownload.Meme);
             var server = vk.Photo.GetMessagesUploadServer().UploadUrl;
-            var json = API.Upload.Photo(file, server);
+            var json = Upload.Photo(file, server);
+            var photo = vk.Photo.SaveMessagesPhoto(json);
+            Message.SendPhoto(photo);
 
         }
 

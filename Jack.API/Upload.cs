@@ -16,6 +16,8 @@ namespace Jack.API
             using (var client = new HttpRequest())
             {
                 client.AddFile("photo", "name");
+                var result = client.Post(url).ToString();
+                text = result;
             }
             return text;
         }
