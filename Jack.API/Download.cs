@@ -17,9 +17,11 @@ namespace Jack.API
                 {
                     name += "Meme_";
                 }
+
                 var random = new Random();
                 int result = random.Next(1, 2345);
                 name += result;
+                name += @".jpg";
                 client.DownloadFile(url, name);
 
                 return name;

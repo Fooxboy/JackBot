@@ -34,12 +34,14 @@ namespace Jack.API
             });
         }
 
-        public static void SendPhoto(System.Collections.ObjectModel.ReadOnlyCollection<VkNet.Model.Attachments.Photo> photo)
+        public static void SendPhoto(System.Collections.ObjectModel.ReadOnlyCollection<VkNet.Model.Attachments.Photo> photo, long peer_id)
         {
             var vk = Vk.Auth();
             vk.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
             {
-                Attachments = photo
+                Attachments = photo,
+                PeerId = peer_id
+               
             });
         }
     }

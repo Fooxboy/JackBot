@@ -29,6 +29,7 @@ namespace Jack
             Commands.Add(new Who());
             
             Commands.Add(new Community());
+            Commands.Add(new Meme());
         }
     }
 }
